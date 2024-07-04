@@ -1,9 +1,9 @@
 import {Route, Routes, Link} from "react-router-dom";
 import {Suspense} from "react";
-import {AboutAsync} from "./pages/About/About.async";
-import {MainAsync} from "./pages/Main/Main.async";
-import {useTheme} from "./theme/useTheme";
-import {classNames} from "./helpers/classNames/classNames";
+import {Main} from "pages/Main";
+import {About} from "pages/About";
+import {classNames} from "shared/lib/classNames/classNames";
+import {useTheme} from "app/providers/ThemeProvider";
 import './styles/index.scss'
 
 const App = () => {
@@ -17,8 +17,8 @@ const App = () => {
 
             <Suspense fallback={'Loading'}>
                 <Routes>
-                    <Route path={'/about'} element={<AboutAsync />}/>
-                    <Route path={'/'} element={<MainAsync />} />
+                    <Route path={'/about'} element={<About />}/>
+                    <Route path={'/'} element={<Main />} />
                 </Routes>
             </Suspense>
         </div>
