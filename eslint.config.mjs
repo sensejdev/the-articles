@@ -19,6 +19,8 @@ export default [
       "react/react-in-jsx-scope": "off",
       "plugin:react/jsx-runtime": "off",
       "no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/ban-types": "off"
     },
     settings: {
       "react": {
