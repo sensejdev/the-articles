@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import "app/styles/index.scss";
-import { Main } from "pages/Main";
 import { NotFound } from "pages/NotFound";
 
 const meta = {
