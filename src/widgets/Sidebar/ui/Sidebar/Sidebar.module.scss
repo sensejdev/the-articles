@@ -23,5 +23,27 @@
   }
 }
 
+.collapsedBtn {
+  position: absolute;
+  right: -32px;
+  bottom: 32px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  fill: var(--inverted-primary-color);
+}
 
 
