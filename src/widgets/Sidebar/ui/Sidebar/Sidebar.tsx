@@ -6,10 +6,10 @@ import * as cls from "./Sidebar.module.scss";
 import { Button } from "shared/ui/Button";
 import { ButtonSize, ButtonTheme } from "shared/ui/Button/ui/Button";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { t } from "i18next";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
+import { t } from "i18next";
 
 interface SidebarProps {
   className?: string;
@@ -42,12 +42,12 @@ export const Sidebar = ({ className }: SidebarProps) => {
       <div className={cls.items}>
         <div className={cls.item}>
           <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.main}>
-            {collapsed ? <MainIcon className={cls.icon} /> : "Главная"}
+            {collapsed ? <MainIcon className={cls.icon} /> : t("Главная")}
           </AppLink>
         </div>
         <div className={cls.item}>
           <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.about}>
-            {collapsed ? <AboutIcon className={cls.icon} /> : "О сайте"}
+            {collapsed ? <AboutIcon className={cls.icon} /> : t("О сайте")}
           </AppLink>
         </div>
       </div>
