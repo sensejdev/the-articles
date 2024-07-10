@@ -4,7 +4,7 @@
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .overlay {
@@ -19,8 +19,9 @@
 .content {
   padding: 20px;
   border-radius: 12px;
-  background-color: #eee;
   transform: scale(0.5);
+  background: var(--inverted-secondary-color);
+  font: var(--font-m);
   max-width: 60%;
   transition: 0.3s transform;
 }
