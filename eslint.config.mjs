@@ -3,6 +3,8 @@ import pluginJs from "@eslint/js";
 import tseslint from "typescript-eslint";
 import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
 import i18next from "i18next";
+import pluginReactHooks from "eslint-plugin-react-hooks";
+
 
 export default [
   {files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
@@ -12,15 +14,17 @@ export default [
   ...tseslint.configs.recommended,
   pluginReactConfig,
   {
+
     plugins: {
       i18next,
+      pluginReactHooks
     },
     rules: {
       "react/react-in-jsx-scope": "off",
       "plugin:react/jsx-runtime": "off",
       "no-unused-vars": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/ban-types": "off"
+      "@typescript-eslint/ban-types": "off",
     },
     settings: {
       "react": {

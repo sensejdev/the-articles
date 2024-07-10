@@ -10,9 +10,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {
-    // backgroundColor: { control: "color" },
-  },
+  argTypes: {},
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
@@ -36,6 +34,20 @@ export const Clear: Story = {
   args: {
     children: "Text",
     theme: ButtonTheme.CLEAR,
+  },
+  decorators: [
+    (Story) => (
+      <div className="app light">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
+export const ClearInverted: Story = {
+  args: {
+    children: "Text",
+    theme: ButtonTheme.CLEAR_INVERTED,
   },
   decorators: [
     (Story) => (

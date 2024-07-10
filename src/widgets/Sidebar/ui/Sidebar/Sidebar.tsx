@@ -9,7 +9,7 @@ import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 interface SidebarProps {
   className?: string;
@@ -17,6 +17,7 @@ interface SidebarProps {
 
 export const Sidebar = ({ className }: SidebarProps) => {
   const [collapsed, setCollapsed] = useState(false);
+  const { t } = useTranslation("sidebar");
 
   const onToggle = () => {
     setCollapsed((prev) => !prev);
