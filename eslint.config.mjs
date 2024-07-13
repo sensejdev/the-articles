@@ -25,6 +25,9 @@ export default [
       "no-unused-vars": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/ban-types": "off",
+      "eslint-disable-next-line": "off",
+      "react/display-name": "off",
+      "@typescript-eslint/no-explicit-any": "warn"
     },
     settings: {
       "react": {
