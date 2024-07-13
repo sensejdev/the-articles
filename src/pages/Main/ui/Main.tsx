@@ -10,12 +10,7 @@ const Main = () => {
     setValue(val);
   };
 
-  return (
-    <div>
-      {t("Главная")}{" "}
-      <Input placeholder={"Login"} value={value} onChange={onChange} />
-    </div>
-  );
+  return <div>{t("Главная")} </div>;
 };
 
 export default Main;
