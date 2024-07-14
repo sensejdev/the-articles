@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import "app/styles/index.scss";
 import { LoginForm } from "features/AuthByUsername/ui/LoginForm/LoginForm";
+import { StoreProvider } from "app/providers/StoreProvider";
 
 const meta = {
   title: "features/LoginForm",
@@ -21,9 +22,11 @@ export const TextInput: Story = {
 
   decorators: [
     (Story) => (
-      <div className="app_dark_theme">
-        <Story />
-      </div>
+      <StoreProvider>
+        <div className="app_dark_theme">
+          <Story />
+        </div>
+      </StoreProvider>
     ),
   ],
 };

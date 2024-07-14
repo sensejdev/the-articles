@@ -7,5 +7,7 @@
   "Обновить страницу": "Reload page",
   "Короткий языке": "En",
   "Введите логин": "Enter login",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Вы ввели неверный логин или пароль": "You entered an incorrect username or password"
 }

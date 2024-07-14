@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import "app/styles/index.scss";
 import { Navbar } from "widgets/Navbar";
 import { BrowserRouter } from "react-router-dom";
+import { StoreProvider } from "app/providers/StoreProvider";
 
 const meta = {
   title: "widget/Navbar",
@@ -24,11 +25,13 @@ export const Light: Story = {
 
   decorators: [
     (Story) => (
-      <BrowserRouter>
-        <div className="app dark">
-          <Story />
-        </div>
-      </BrowserRouter>
+      <StoreProvider>
+        <BrowserRouter>
+          <div className="app_dark_theme">
+            <Story />
+          </div>
+        </BrowserRouter>
+      </StoreProvider>
     ),
   ],
 };
@@ -37,11 +40,13 @@ export const Dark: Story = {
   args: {},
   decorators: [
     (Story) => (
-      <BrowserRouter>
-        <div className="app dark">
-          <Story />
-        </div>
-      </BrowserRouter>
+      <StoreProvider>
+        <BrowserRouter>
+          <div className="app_light_theme">
+            <Story />
+          </div>
+        </BrowserRouter>
+      </StoreProvider>
     ),
   ],
 };
